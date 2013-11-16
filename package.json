@@ -1,0 +1,21 @@
+{
+  "name": "twilio-color",
+  "version": "0.0.0",
+  "description": "A web site that changes its background color when a Twilio SMS is recieved.",
+  "main": "server.js",
+  "repository": "https://github.com/alyssais/twilio-color.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "twilio",
+    "sms"
+  ],
+  "author": "Alyssa Ross <hi@alyssa.is> (@couldntmissher)",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "twilio": "~1.4.0",
+    "express.io": "~1.1.13"
+  }
+}

@@ -1,0 +1,25 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 10em;
+	text-align: center;
+	/* the background-color will be set with JavaScript */
+
+	/* make background color changes fade */
+  -webkit-transition: background 2s;
+     -moz-transition: background 2s;
+       -o-transition: background 2s;
+          transition: background 2s;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+a {
+	/* color taken from the Twilio logo */
+	color: #FF0026;
+}
