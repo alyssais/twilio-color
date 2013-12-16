@@ -11,19 +11,16 @@ app.http().io();
 
 var lastColor;
 
+app.use(express.bodyParser());
+
 // send client code from the public/ folder
 app.use(express.static(process.cwd() + '/public'));
 
-// handle SMS from Twilio
-app.get('/twilio/sms', function(req, res) {
-  if (!twilio.validateExpressRequest(req, authToken)) {
-    console.log("We got a baddy");
-    res.send("Nice try.");
-    return;
-  }
+// handle input
+app.post('/hook', function(req, res) {
 
-  // extract the color from the Twilio request
-  var color = req.query.Body.toLowerCase().replace(/\s/g, "");
+  // extract the color from the request
+  var color = (req.body.Body || req.body.text).toLowerCase().replace(/\s/g, "");
 
   console.log(color);
 
@@ -35,6 +32,7 @@ app.get('/twilio/sms', function(req, res) {
   lastColor = color;
 
   // send the reply to Twilio
+  // SendGrid will just ignore the reply
   res.send(resp.toString());
 });
 
