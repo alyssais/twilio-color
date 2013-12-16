@@ -3,7 +3,7 @@ var twilio = require("twilio");
 var express = require("express.io");
 var shared = require("./public/shared");
 
-var authToken = require("fs").readFileSync("authtoken.txt").toString().trim();
+var authToken = process.env.AUTH_TOKEN || require("fs").readFileSync("authtoken.txt").toString().trim();
 
 // create the express.io app
 var app = express();
@@ -43,4 +43,4 @@ app.io.route('ready', function(req) {
     req.io.emit('color', lastColor);
 });
 
-app.listen(7076);
+app.listen(process.env.PORT || 7076);
