@@ -1,7 +1,9 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	padding-top: 10em;
+  margin: 0;
+	padding: 10em 0 8em;
 	text-align: center;
+  
 	/* the background-color will be set with JavaScript */
 
 	/* make background color changes fade */
@@ -24,13 +26,17 @@ a {
 	color: #FF0026;
 }
 
+.highlight {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .text {
   float: left;
 }
 
 .text-container {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.7);
   padding: 0 1em 1em;
   border-radius: 1em;
 }
@@ -39,4 +45,12 @@ a {
   clear: both;
   content: '';
   display: block;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
 }
