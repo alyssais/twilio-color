@@ -20,7 +20,7 @@ app.use(express.static(process.cwd() + '/public'));
 app.post('/hook', function(req, res) {
 
   // extract the color from the request
-  var color = (req.body.Body || req.body.text).toLowerCase().replace(/\s/g, "");
+  var color = (req.body.Body || req.body.text).split(/\n/)[0].toLowerCase().replace(/\s/g, "");
 
   console.log(color);
 
