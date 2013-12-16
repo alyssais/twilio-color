@@ -23,3 +23,20 @@ a {
 	/* color taken from the Twilio logo */
 	color: #FF0026;
 }
+
+.text {
+  float: left;
+}
+
+.text-container {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0 1em 1em;
+  border-radius: 1em;
+}
+
+.text-container:after {
+  clear: both;
+  content: '';
+  display: block;
+}

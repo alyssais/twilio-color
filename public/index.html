@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>Control this web page.</h1>
-    <h2>Text a hex color to +44 118 310 0872 or +1 (226) 241-9940.</h2>
-    <p>Powered by <a href="https://www.twilio.com">Twilio</a>.</p>
+    <div class="text-container">
+    <div class="text">
+      <h1>Control this web page.</h1>
+      <h2>Text a color (like <span id="example"></span>)<br>to +44 118 310 0872 or +1 (226) 241-9940.</h2>
+      <p>Powered by <a href="https://www.twilio.com">Twilio</a>.</p>
+    </div>
+    </div>
 
     <!-- load JavaScript dependencies -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    <script src="/shared.js"></script>
     <script src="/client.js"></script>
   </body>
 </html>
